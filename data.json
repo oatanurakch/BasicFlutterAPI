@@ -16,6 +16,12 @@
         "subtitle" : "มาเริ่มรู้จัก Flutter กันก่อน",
         "image_url" : "https://raw.githubusercontent.com/oatanurakch/BasicFlutterAPI/main/Flutter.jpg",
         "detail" : "Cross-Platform Framework ที่ใช้ในการพัฒนา Native Mobile Application (Android/iOS) พัฒนาโดยบริษัท Google Inc. โดยใช้ภาษา Dart ในการพัฒนา ที่มีความคล้ายกับภาษา C# และ Java."
+    },
+    {
+        "title" : "What is Arduino ?",
+        "subtitle" : "มาเริ่มรู้จัก Arduino กันก่อน",
+        "image_url" : "https://raw.githubusercontent.com/oatanurakch/BasicFlutterAPI/main/Flutter.jpg",
+        "detail" : "โครงการที่นำชิปไอซีไมโครคอนโทรลเลอร์ตระกูลต่างๆ มาใช้ร่วมกันในภาษา C ซึ่งภาษา C นี้เป็นลักษณะเฉพาะ คือมีการเขียนไลบารี่ของ Arduino ขึ้นมาเพื่อให้การสั่งงานไมโครคอนโทรลเลอร์ที่แตกต่างกัน สามารถใช้งานโค้ดตัวเดียวกันได้ โดยตัวโครงการได้ออกบอร์ดทดลองมาหลายๆรูปแบบ เพื่อใช้งานกับ IDE ของตนเอง"
     }
     
 ]

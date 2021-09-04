@@ -20,7 +20,7 @@
     {
         "title" : "What is Arduino ?",
         "subtitle" : "มาเริ่มรู้จัก Arduino กันก่อน",
-        "image_url" : "https://raw.githubusercontent.com/oatanurakch/BasicFlutterAPI/main/Flutter.jpg",
+        "image_url" : "https://raw.githubusercontent.com/oatanurakch/BasicFlutterAPI/main/Arduino.jpg",
         "detail" : "โครงการที่นำชิปไอซีไมโครคอนโทรลเลอร์ตระกูลต่างๆ มาใช้ร่วมกันในภาษา C ซึ่งภาษา C นี้เป็นลักษณะเฉพาะ คือมีการเขียนไลบารี่ของ Arduino ขึ้นมาเพื่อให้การสั่งงานไมโครคอนโทรลเลอร์ที่แตกต่างกัน สามารถใช้งานโค้ดตัวเดียวกันได้ โดยตัวโครงการได้ออกบอร์ดทดลองมาหลายๆรูปแบบ เพื่อใช้งานกับ IDE ของตนเอง"
     }
     

@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:layout/pages/detail.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
 
 class Homepage extends StatefulWidget {
   // const Homepage({ Key? key }) : super(key: key);
@@ -21,18 +23,25 @@ class _HomepageState extends State<Homepage> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: FutureBuilder(
-          builder: (context, snapshot) {
-            var _data = json.decode(snapshot.data.toString());
+          builder: (context, AsyncSnapshot snapshot) {
+            // var _data = json.decode(snapshot.data.toString());
             // Listview.builder คล้าย ๆ การวนหลูบ index จะวนอัตโนมัติ
             return ListView.builder(
+              // itemBuilder: (BuildContext context, int index) {
+              //   return Mybox(_data[index]["title"], _data[index]["subtitle"],
+              //       _data[index]["image_url"], _data[index]["detail"],);
+              // },
               itemBuilder: (BuildContext context, int index) {
-                return Mybox(_data[index]["title"], _data[index]["subtitle"],
-                    _data[index]["image_url"], _data[index]["detail"],);
+                return Mybox(snapshot.data[index]["title"], snapshot.data[index]["subtitle"],
+                    snapshot.data[index]["image_url"], snapshot.data[index]["detail"],);
               },
-              itemCount: _data.length,
+              itemCount: snapshot.data.length,
             );
           },
-          future: DefaultAssetBundle.of(context).loadString('assets/data.json'),
+
+          // future: DefaultAssetBundle.of(context).loadString('assets/data.json'),
+          future: getData(),
+
         ),
       ),
     );
@@ -101,4 +110,12 @@ class _HomepageState extends State<Homepage> {
       ),
     );
   }
+
+  Future getData() async {
+    var url = Uri.https('raw.githubusercontent.com', 'oatanurakch/BasicFlutterAPI/main/data.json');
+    var response = await http.get(url);
+    var result = json.decode(response.body);
+    return result;
+  }
+
 }
